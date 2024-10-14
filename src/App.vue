@@ -26,7 +26,13 @@ export default {
 </script>
 
 <template>
-    <ProjectCard />
+    <div class="container">
+        <div class="row">
+            <div class="col-3 mt-3" v-for="(project, index) in projects" :key="index">
+                <ProjectCard :project="project" />
+            </div>
+        </div>
+    </div>
 </template>
 
 <style scoped></style>
