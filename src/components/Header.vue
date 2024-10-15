@@ -1,8 +1,8 @@
 <template>
-    <header class="bg-light shadow-sm">
-        <div class="container px-4 py-3 d-flex justify-content-between align-items-center">
+    <header class="shadow-sm">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
             <h1 class="h4 fw-bold text-dark">Il Mio Portfolio</h1>
-            <nav class="bg-light py-2 d-flex">
+            <nav class="py-2 d-flex">
                 <router-link to="/" class="text-decoration-none d-block px-4 py-2 text-dark"
                     >Home
                 </router-link>
@@ -25,4 +25,11 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+</style>

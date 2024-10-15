@@ -15,5 +15,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
 }
 </style>

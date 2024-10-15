@@ -26,13 +26,23 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-3 mt-3" v-for="(project, index) in projects" :key="index">
-                <ProjectCard :project="project" />
+    <main class="bg-light">
+        <div class="container bg-light">
+            <div class="row">
+                <h1>I miei progetti</h1>
+                <div
+                    class="col-4 d-flex align-items-stretch my-3"
+                    v-for="(project, index) in projects"
+                    :key="index">
+                    <ProjectCard :project="project" />
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+    padding-top: 80px;
+}
+</style>
