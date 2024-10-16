@@ -11,10 +11,12 @@ export default {
     },
     methods: {
         getProjectInfo() {
-            axios.get(`http://127.0.0.1:8000/api/project/${store.projectID}`).then((response) => {
-                console.log(response.data)
-                this.project = response.data
-            })
+            axios
+                .get(`http://127.0.0.1:8000/api/project/slug/${store.projectSlug}`)
+                .then((response) => {
+                    console.log(response.data)
+                    this.project = response.data
+                })
         },
     },
     mounted() {

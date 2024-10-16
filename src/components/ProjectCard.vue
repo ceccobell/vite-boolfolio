@@ -23,8 +23,8 @@ export default {
             </div>
             <button class="border-0">
                 <router-link
-                    :to="`/project/${project.id}`"
-                    @click="store.projectID = project.id"
+                    :to="`/project/${project.slug}`"
+                    @click=";(store.projectID = project.id), (store.projectSlug = project.slug)"
                     class="btn btn-primary"
                     >Vedi Progetto</router-link
                 >
