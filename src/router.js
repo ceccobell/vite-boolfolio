@@ -7,7 +7,7 @@ import ProjectCardComplete from "./components/ProjectCardComplete.vue"
 const routes = [
     { path: "/", component: Home },
     { path: "/portfolio", component: Portfolio },
-    { path: "/project", component: ProjectCardComplete },
+    { path: "/project/:id", component: ProjectCardComplete },
 ]
 
 const router = createRouter({

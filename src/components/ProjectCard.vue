@@ -1,7 +1,14 @@
 <script>
+import { store } from "../store"
+
 export default {
     props: {
         project: Object,
+    },
+    data() {
+        return {
+            store,
+        }
     },
 }
 </script>
@@ -15,7 +22,12 @@ export default {
                 <h5 class="slug">Slug: {{ project.slug }}</h5>
             </div>
             <button class="border-0">
-                <router-link to="/project" class="btn btn-primary">Vedi Progetto</router-link>
+                <router-link
+                    :to="`/project/${project.id}`"
+                    @click="store.projectID = project.id"
+                    class="btn btn-primary"
+                    >Vedi Progetto</router-link
+                >
             </button>
         </div>
     </div>

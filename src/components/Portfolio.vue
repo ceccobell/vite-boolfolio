@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         getProjects() {
-            axios.get("http://127.0.0.1:8000/api/projects").then((response) => {
+            axios.get("http://127.0.0.1:8000/api/portfolio").then((response) => {
                 console.log(response.data)
                 this.projects = response.data
             })
